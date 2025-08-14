@@ -1,0 +1,157 @@
+
+
+def rec(n):
+    if(n != 0):
+        print(n)
+        rec(n-1)
+        print(n)
+rec(5)
+        
+    
+   
+    
+def rec1(n):
+    if(n <= 5):
+        print(n)
+        rec1(n+1)
+        print(n)
+rec1(1)
+
+
+
+
+def rec2(n):
+    if(n != 0):
+        
+        rec2(n-1)
+        print(n)
+rec2(5)
+
+
+
+
+def rec3(n):
+    if(n <= 5):
+        print(n)
+        rec3(n+1)
+        
+rec3(1)
+
+
+#with return key
+
+def rec_returnkey(index,n):
+    if index == n+1:
+        return
+    print(index,end = " ")
+    recreturnkey(index+1,n)
+recreturnkey(1,5)
+
+
+
+def even_rec(index,n):
+    while index <= n+1:
+        if index %2 == 0:
+            print(index)
+        even_rec(index+1,n)
+          
+even_rec(1,10)        
+
+
+
+
+
+def odd_rec(index,n):
+    while index < n+1:
+        if index %2 == 1:
+            print(index)
+        even_rec(index+1,n)
+        return  
+odd_rec(1,10) 
+
+
+def evenrec(n):
+    if n < 0:
+        return
+    print(n)
+    evenrec(n-2)
+evenrec(10)
+
+
+
+
+def oddrec(n):
+    if n < 0:
+        return
+    print(n)
+    oddrec(n-2)
+n = 25
+oddrec(n-1 if n%2 == 0 else n)
+
+
+
+#sum of n values
+def sum_N_values(n):
+    
+     if n==1:
+        return 1
+     return n + sum_N_values(n-1)
+res = sum_N_values(5)
+print(res)
+
+       
+
+
+#factorial
+def fac(n):
+    if n==1:
+        return 1
+    return n * fac(n-1)
+res = fac(5)
+print(res)
+
+
+
+
+#sum of values in list
+def sum_of_given_list(index, nums,n):
+    if index == n:
+        return 0
+    return nums[index] + sum_of_given_list(index+1, nums,n)    
+nums = [2,3,4,5,6]
+res = sum_of_given_list(0,nums,len(nums))    
+print(res)    
+
+
+
+#sum of values in list
+def sum_of_given_list_slicing(nums):
+    if len(nums)==1:
+        return nums[0]
+    return nums[0] + sum_of_given_list_slicing(nums[1:])    
+nums = [2,3,4,5,6]
+res = sum_of_given_list_slicing(nums)    
+print(res)
+
+
+
+#palindrome
+def palindrome(left,nums,right):
+    if left >= right:
+        return "palindrome"
+    if nums[left] != nums[right]:
+        return "not palindrome"
+    return palindrome(left+1,nums,right-1)
+nums = [2,4,5,4,2]
+res = palindrome(0,nums,len(nums)-1)
+print(res)
+
+
+
+
+
+
+
+
+
+
