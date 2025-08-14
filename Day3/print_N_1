@@ -1,5 +1,5 @@
 
-
+#N t0 1 and 1 to N
 def rec(n):
     if(n != 0):
         print(n)
@@ -9,7 +9,7 @@ rec(5)
         
     
    
-    
+#1 t0 N and N to 1
 def rec1(n):
     if(n <= 5):
         print(n)
@@ -19,7 +19,7 @@ rec1(1)
 
 
 
-
+#1 to n
 def rec2(n):
     if(n != 0):
         
@@ -29,7 +29,7 @@ rec2(5)
 
 
 
-
+#1 to n
 def rec3(n):
     if(n <= 5):
         print(n)
